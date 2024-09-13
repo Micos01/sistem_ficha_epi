@@ -1,0 +1,40 @@
+{
+"Uniformes":{
+
+"Ajudante Comum":["Conjunto Helanca","Bota Operacional","Luva Pigmentada","Protetor Auricular"],
+"Auxiliar de Deposito":["Conjunto Operacional de Helanca","Bota Operacional","Luva Pigmentada"],
+"Auxiliar de Deposito Coopmac":["Conjunto Operacional de Helanca","Bota Operacional","Luva Pigmentada","Protetor Auricular"],
+"Auxiliar de Limpeza Feminino":["Conjunto de Limpeza","Sapato Soft","Luva Látex","Touca"],
+"Auxiliar de Limpeza Masculino":["Conjunto de Limpeza","Sapato Soft","Luva Látex"],
+"Auxiliar de Limpeza Masculino SCS":["Conjunto de Limpeza Boulevard","Sapato Soft","Luva Látex","Touca","Avental"],
+"Auxiliar de Limpeza Feminino SCS":["Conjunto de Limpeza Boulevard","Sapato Soft","Luva Látex","Bandana","Avental"],
+"Auxiliar de Manutenção":["Conjunto Operacional","Bota Operacional","Luva Pigmentada","Protetor Auricular"],
+"Cabo de Turma":[""],
+"Controlador de Acesso Feminino":["Camisa Social","Sapatilha","Calça Social","Echarpe","Blazer"],
+"Controlador de Acesso Masculino":["Camisa Social","Sapato Social","Calça Social","Gravata","Blazer"], 
+"Facilitadora":["Camisa Social","Sapatilha","Calça Social","Echarpe"],
+"Facilitador":["Camisa Social","Sapatilha","Calça Social","Gravata"],
+"Jardineiro":["Conjunto Operacional","Bota Operacional","Luva Latéx","Luva Vulcanizada","Perneira","Avental de Raspa","Capacete Aclopado com Abafador"],
+"Motorista de Ônibus Urbano":[""],
+"Operador de Empilhadeira":["Cojunto Operacional Elanca","Bota Operacional","Luva Pigmentada","Protetor Auricular","ôculos Inc"],
+"Recepcionista":[""],
+"Administrativo Masculino":["Camisa Social","Sapato Social","Calça Social","Gravata"],
+"Administrativo Feminino":["Camisa Social","Sapatilha","Calça Social","Echarpe"],
+"Tratador de Animais":[""],
+"Tratorista Agricola":[""]
+
+},
+"Setores":["Base","Condomínio","Comércio","Escritório","Haras","Indústria","Shopping","Subestação","Aeroporto"],
+"funcao_map":{"Auxiliar de Limpeza Feminino": "AUXILIAR DE LIMPEZA",
+                    "Auxiliar de Limpeza Masculino": "AUXILIAR DE LIMPEZA",
+                    "Auxiliar de Limpeza Masculino SCS": "AUXILIAR DE LIMPEZA",
+                    "Auxiliar de Limpeza Feminino SCS": "AUXILIAR DE LIMPEZA",
+                    "Controlador de Acesso Feminino": "CONTROLADOR DE ACESSO",
+                    "Controlador de Acesso Masculino": "CONTROLADOR DE ACESSO",
+                    "Facilitadora": "FACILITADOR",
+                    "Facilitador": "FACILITADOR",
+                    "Auxiliar de Deposito Coopmac": "AUXILIAR DE DEPOSITO",
+                    "Administrativo Masculino": "ADMINISTRATIVO",
+                    "Administrativo Feminino": "ADMINISTRATIVO"}
+
+}

@@ -1,0 +1,5 @@
+Pyside6
+pandas
+openpyxl
+xlwings
+auto-py-to-exe #para gerar o executavel mais facilmente
