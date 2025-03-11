@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ficha_epiANDRxK.ui'
+## Form generated from reading UI file 'ficha_epioPkbAv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.7.2
 ##
@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(920, 575)
+        MainWindow.resize(879, 577)
         MainWindow.setStyleSheet(u"QMainWindow {\n"
 "    background-color: #f0f0f0;\n"
 "}\n"
@@ -741,7 +741,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 830, 1194))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -1139, 789, 1588))
         self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.horizontalLayout = QHBoxLayout()
@@ -1001,6 +1001,79 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addLayout(self.horizontalLayout_8)
 
+        self.horizontalLayout_10 = QHBoxLayout()
+        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.verticalLayout_12 = QVBoxLayout()
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.horizontalLayout_12 = QHBoxLayout()
+        self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
+        self.le_pesquisa_local_config = QLineEdit(self.scrollAreaWidgetContents)
+        self.le_pesquisa_local_config.setObjectName(u"le_pesquisa_local_config")
+
+        self.horizontalLayout_12.addWidget(self.le_pesquisa_local_config)
+
+        self.btn_pesquisa_local_config = QPushButton(self.scrollAreaWidgetContents)
+        self.btn_pesquisa_local_config.setObjectName(u"btn_pesquisa_local_config")
+
+        self.horizontalLayout_12.addWidget(self.btn_pesquisa_local_config)
+
+
+        self.verticalLayout_12.addLayout(self.horizontalLayout_12)
+
+        self.tv_local = QTableView(self.scrollAreaWidgetContents)
+        self.tv_local.setObjectName(u"tv_local")
+        self.tv_local.setMinimumSize(QSize(0, 350))
+        self.tv_local.setEditTriggers(QAbstractItemView.EditTrigger.AnyKeyPressed|QAbstractItemView.EditTrigger.DoubleClicked|QAbstractItemView.EditTrigger.EditKeyPressed|QAbstractItemView.EditTrigger.SelectedClicked)
+
+        self.verticalLayout_12.addWidget(self.tv_local)
+
+
+        self.horizontalLayout_10.addLayout(self.verticalLayout_12)
+
+        self.frame_7 = QFrame(self.scrollAreaWidgetContents)
+        self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setMaximumSize(QSize(250, 16777215))
+        self.frame_7.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_13 = QVBoxLayout(self.frame_7)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.label_19 = QLabel(self.frame_7)
+        self.label_19.setObjectName(u"label_19")
+
+        self.verticalLayout_13.addWidget(self.label_19)
+
+        self.label_20 = QLabel(self.frame_7)
+        self.label_20.setObjectName(u"label_20")
+
+        self.verticalLayout_13.addWidget(self.label_20)
+
+        self.le_add_Setor_config_2 = QLineEdit(self.frame_7)
+        self.le_add_Setor_config_2.setObjectName(u"le_add_Setor_config_2")
+        sizePolicy1.setHeightForWidth(self.le_add_Setor_config_2.sizePolicy().hasHeightForWidth())
+        self.le_add_Setor_config_2.setSizePolicy(sizePolicy1)
+
+        self.verticalLayout_13.addWidget(self.le_add_Setor_config_2)
+
+        self.btn_add_local = QPushButton(self.frame_7)
+        self.btn_add_local.setObjectName(u"btn_add_local")
+
+        self.verticalLayout_13.addWidget(self.btn_add_local)
+
+        self.btn_remover_local = QPushButton(self.frame_7)
+        self.btn_remover_local.setObjectName(u"btn_remover_local")
+
+        self.verticalLayout_13.addWidget(self.btn_remover_local)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_13.addItem(self.verticalSpacer_4)
+
+
+        self.horizontalLayout_10.addWidget(self.frame_7)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_10)
+
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.verticalLayout_7.addWidget(self.scrollArea)
@@ -1021,7 +1094,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.pages.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1063,6 +1136,11 @@ class Ui_MainWindow(object):
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"Setor:", None))
         self.btn_add_setor_config.setText(QCoreApplication.translate("MainWindow", u"Adicionar", None))
         self.btn_remover_setor_config.setText(QCoreApplication.translate("MainWindow", u"Remover", None))
+        self.btn_pesquisa_local_config.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        self.label_19.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Locais da Planilha:</p></body></html>", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"Local:", None))
+        self.btn_add_local.setText(QCoreApplication.translate("MainWindow", u"Adicionar", None))
+        self.btn_remover_local.setText(QCoreApplication.translate("MainWindow", u"Remover", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Configura\u00e7\u00f5es Ficha", None))
     # retranslateUi
 

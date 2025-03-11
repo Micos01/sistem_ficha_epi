@@ -42,6 +42,34 @@ class Database:
             finally:
                 self.close_connection()
 
+    def create_local_de_preencher(self):
+        """Cria a tabela de para o preenchimento do local de preenchimento das tabelas"""
+        if self.conecta():
+            try:
+                cursor = self.connection.cursor()
+                cursor.execute("""
+            CREATE TABLE IF NOT EXISTS local_tabela (
+                               id INTEGER PRIMARY KEY AUTOINCREMENT.
+                               NOME TEXT,
+                               DATA_ADMISSSAO TEXT,
+                               CPF TEXT,
+                               SETOR TEXT,
+                               TAM_UNIFORME TEXT,
+                               TAM_SAPATO TEXT
+                               )
+                
+    
+""")
+                self.connection.commit()
+            except sqlite3.Error as e:
+                print(f"Não foi possível criar tabela:{e}")
+
+            finally:
+    
+                self.close_connection()
+    
+    
+
     def create_setores(self):
         """Cria a tabela de setores, se não existir."""
         if self.conecta():

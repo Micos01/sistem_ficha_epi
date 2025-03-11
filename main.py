@@ -1,13 +1,11 @@
 import os
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox,QFileDialog
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PySide6.QtGui import QIcon
 from PySide6.QtSql import QSqlDatabase, QSqlTableModel
 from ui_main import Ui_MainWindow
 from PySide6.QtCore import Qt
-import openpyxl as pl
 import shutil
-import json
 import sqlite3
 from database import Database
 from datetime import datetime
@@ -127,14 +125,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """Preenche a ficha de EPI e preserva as imagens no arquivo Excel."""
         try:
             # Coletar dados dos campos
-            data_admissao = self.le_admissao.text()
-            data_int = self.le_integracao.text()
-            nome = self.line_nome.text().upper()
-            tam_uniforme = self.line_tam_uniforme.text()
-            tam_sapato = self.line_tam_sapato.text()
-            cpf = self.line_cpf.text()
-            setor = self.cb_setor.currentText()
-            funcao = self.cb_funcao.currentText()
+            data_admissao:str = self.le_admissao.text()
+            data_int :str = self.le_integracao.text()
+            nome : str = self.line_nome.text().upper()
+            tam_uniforme :str = self.line_tam_uniforme.text()
+            tam_sapato :str = self.line_tam_sapato.text()
+            cpf :str = self.line_cpf.text()
+            setor :str = self.cb_setor.currentText()
+            funcao :str = self.cb_funcao.currentText()
 
             # Caminho do arquivo original e do destino
             origem = "files//ficha_epi.xlsx"
@@ -149,7 +147,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             # Preencher os campos da planilha
             sheet['H5'].value = nome
-            sheet['AH5'].value = data_admissao
+            sheet['AH5'].value= data_admissao
             sheet['W5'].value = cpf
             sheet['U6'].value = setor
             sheet['V25'].value = tam_uniforme
@@ -162,9 +160,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             cursor = db.connection.cursor()
             cursor.execute("SELECT descricao FROM itens_funcao WHERE funcao = ?", (funcao,))
             itens_uniforme = cursor.fetchall()
-
-            # Preencher os itens de uniforme nas células F25 a F31
+            
+            # Preencher os itens de uniforme nas células F25 a F31 pulando a 32 
             for index, item in enumerate(itens_uniforme, start=25):
+                if index == 32:
+                    continue
                 sheet[f'F{index}'].value = item[0]
                 sheet[f'B{index}'].value = data_int
                 sheet[f'X{index}'].value = 2 if index == 25 else 1
@@ -226,7 +226,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
                  # Caminho do arquivo original e do destino
                 origem = "files//ficha_epi.xlsx"
-                destino = f"{self.diretorio}/{data_admissao.replace('/', '_')}_{nome}.xlsx"
+                destino = f"FICHAS//{data_admissao.replace('/', '_')}_{nome}.xlsx"
 
                 shutil.copyfile(origem, destino)
 
